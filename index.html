@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Homepage -->
+        <div id="homepage" class="page active">
+            <header>
+                <h1>Tic Tac Toe</h1>
+                <p class="subtitle">Solo or Duo!</p>
+            </header>
+            
+            <div class="home-content">
+                <div class="feature-list">
+                    <div class="feature">
+                        <h3>🎮 Play Modes</h3>
+                        <p>Single Player vs Computer or Two Players</p>
+                    </div>
+                    <div class="feature">
+                        <h3>🏆 Score Tracking</h3>
+                        <p>Keep track of your wins and losses</p>
+                    </div>
+                </div>
+                
+                <button id="play-now-btn" class="action-btn large-btn">Play Now</button>
+            </div>
+        </div>
+
+        <!-- Game Mode Selection -->
+        <div id="mode-selection" class="page">
+            <header>
+                <h1>Tic Tac Toe</h1>
+                <p class="subtitle">Choose Your Game Mode</p>
+            </header>
+            
+            <div class="mode-content">
+                <div class="mode-option">
+                    <h3>Single Player</h3>
+                    <p>Play against our smart computer AI</p>
+                    <button id="single-player-btn" class="mode-btn">Play Solo</button>
+                </div>
+                
+                <div class="mode-option">
+                    <h3>Two Players</h3>
+                    <p>Play with a friend on the same device</p>
+                    <button id="two-player-btn" class="mode-btn">Play Duo</button>
+                </div>
+            </div>
+            
+            <button id="back-to-home-btn" class="back-btn">← Back to Home</button>
+        </div>
+
+        <!-- Game Board -->
+        <div id="game-board-section" class="page">
+            <header>
+                <h1>Tic Tac Toe</h1>
+                <div class="game-info">
+                    <div class="player-turn" id="current-player-display">Player X's Turn</div>
+                    <div class="scoreboard">
+                        <span class="score" id="player1-score">X: 0</span>
+                        <span class="score" id="player2-score">O: 0</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="board-container">
+                <div class="board" id="game-board">
+                    <div class="cell" data-index="0"></div>
+                    <div class="cell" data-index="1"></div>
+                    <div class="cell" data-index="2"></div>
+                    <div class="cell" data-index="3"></div>
+                    <div class="cell" data-index="4"></div>
+                    <div class="cell" data-index="5"></div>
+                    <div class="cell" data-index="6"></div>
+                    <div class="cell" data-index="7"></div>
+                    <div class="cell" data-index="8"></div>
+                </div>
+            </div>
+
+            <div class="game-controls">
+                <button id="restart-btn" class="control-btn">Restart Round</button>
+                <button id="reset-btn" class="control-btn">Reset Game</button>
+                <button id="back-to-modes-btn" class="back-btn">Change Mode</button>
+            </div>
+        </div>
+
+        <!-- Game Result -->
+        <div id="game-result" class="result-overlay hidden">
+            <div class="result-content">
+                <h2 id="result-title">Game Over!</h2>
+                <p id="result-message"></p>
+                <button id="play-again-btn" class="action-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
